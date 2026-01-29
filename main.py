@@ -1,6 +1,16 @@
-def main():
+import os
+import asyncio
+from dotenv import load_dotenv
+
+load_dotenv()
+
+print(os.getenv("LANGSMITH_PROJECT"))
+
+async def main():
     print("Hello from mcp-adapters!")
 
 
 if __name__ == "__main__":
-    main()
+   asyncio.run(main())
+
+
